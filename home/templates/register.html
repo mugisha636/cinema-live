@@ -92,8 +92,7 @@
             {%endfor%} {%endif%}
             <form method="POST">
               {% csrf_token %} {{form|crispy}}
-              <label class="form-label" for="customFile"></label>
-<input type="file" class="form-control" id="customFile" />
+
 
               <p><a href="/login">Already have an account?</a></p>
 
