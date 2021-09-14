@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os.path
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a&s(8le7xt1u4&3_oql=q3np&-o1u)+d0hc0k-m-f!=l39+*mb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['mugisha11.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,8 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'EMMY',
         'USER': 'postgres',
-        'PASSWORD': 'emmanuel1',
-        'HOST': 'localhost'
+        'PASSWORD': 'emmanuel1'
     }
 }
 
@@ -129,15 +128,13 @@ STATIC_URL = '/static/'
 # located
 
 STATICFILES_DIRS = [
-    'static',
-    os.path.join(BASE_DIR, 'static')
+    'static'
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
